@@ -1,0 +1,100 @@
+.my__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2rem 4rem;
+}
+
+.my__navbar-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+}
+
+.my__navbar-logo {
+    margin-right: 2rem;
+}
+
+.my__navbar-logo h1 {
+    width: 62px;
+    height: 16px;
+    color: #fff;
+}
+
+.my__navbar-links p,
+.my__navbar-menu_container p {
+    color: #fff;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: capitalize;
+
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.my__navbar-links p {
+    margin-top: 0.5rem;
+}
+
+.my__navbar-menu {
+    margin-left: 1rem;
+
+    display: none;
+    position: relative;
+}
+
+.my__navbar-menu svg {
+    cursor: pointer;
+}
+
+.my__navbar-menu_container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+
+    text-align: end;
+    background: var(--color-footer);
+    padding: 2rem;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    margin-top: 1rem;
+    min-width: 210px;
+    border-radius: 5px;
+    box-shadow: 0 0 5 rgba(0,0,0,0.2);
+}
+
+.my__navbar-menu_container p {
+    margin: 1rem 0;
+}
+
+
+@media screen and (max-width: 1050px) {
+    .my__navbar-links {
+        display: none;
+    }
+    .my__navbar-menu {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .my__navbar{
+        padding: 2rem 4rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .my__navbar{
+        padding: 2rem;
+    }
+
+    .my__navbar-menu_container {
+        top: 20px;
+    }
+}
