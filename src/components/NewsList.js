@@ -4,7 +4,7 @@ import NewsItem from './NewsItem'
 
 const NewsList = ({category}) => {
     const [articles, setArticles] = useState([])
-    let url = 'https://newsapi.org/v2/top-headlines?country=us&category='.concat(Object.values({category})[0],'&apiKey=89dccbf3b5894bab8119151b35820686')
+    let url = 'https://newsapi.org/v2/top-headlines?country=us&category='.concat(Object.values({category})[0],'&apiKey=')
     console.log(Object.values({category}),url)
 
     useEffect(() => {
