@@ -4,8 +4,7 @@ import NewsItem from './NewsItem'
 
 const NewsList = ({category}) => {
     const [articles, setArticles] = useState([])
-    let url = 'https://newsapi.org/v2/top-headlines?country=us&category='.concat(Object.values({category})[0],'&apiKey=89dccbf3b5894bab8119151b35820686')
-    console.log(Object.values({category}),url)
+    let url = 'https://newsapi.org/v2/top-headlines?country=us&category='.concat(Object.values({category})[0],'&pageSize=100&apiKey=89dccbf3b5894bab8119151b35820686')
 
     useEffect(() => {
         const getArticles = async () => {
@@ -14,11 +13,13 @@ const NewsList = ({category}) => {
             setArticles((await response).data.articles)
         }
         getArticles()
-    },[])
+    },[url])
 
     return (
         <div>
             {articles.map(article => {
+                if (article.title !== 
+                    "[Removed]"){
                 return (
                     <NewsItem 
                         title={article.title}
@@ -26,7 +27,10 @@ const NewsList = ({category}) => {
                         url={article.url}
                         urlToImage={article.urlToImage}
                     />
-                )
+                )}
+                else {
+                    return <></>
+                }
             })}
         </div>
     )

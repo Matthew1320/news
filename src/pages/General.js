@@ -1,9 +1,9 @@
-import React from 'react'
+import NewsList from "../components/NewsList";
 
 export function General() {
   return (
-    <>
-        <h1>General</h1>
-    </>
-  )
+    <div className="App">
+      <NewsList category={'general'}/>
+    </div>
+  );
 }

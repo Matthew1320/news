@@ -1,9 +1,7 @@
-import React from 'react'
-
 export function HomePage() {
-    return (
-      <>
-          <h1>Home Page</h1>
-      </>
-    )
-  }
+  return (
+    <div className="App">
+      <h1>Welcome to the Mews</h1>
+    </div>
+  );
+}

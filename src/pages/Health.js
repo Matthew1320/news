@@ -1,9 +1,9 @@
-import React from 'react'
+import NewsList from "../components/NewsList";
 
 export function Health() {
   return (
-    <>
-        <h1>Health</h1>
-    </>
-  )
+    <div className="App">
+      <NewsList category={'health'}/>
+    </div>
+  );
 }
