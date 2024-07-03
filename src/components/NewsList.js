@@ -2,9 +2,9 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import NewsItem from './NewsItem'
 
-const NewsList = ({category}) => {
+const NewsList = ({type,category}) => {
     const [articles, setArticles] = useState([])
-    let url = 'https://newsapi.org/v2/top-headlines?country=us&category='.concat(Object.values({category})[0],'&pageSize=100&apiKey=89dccbf3b5894bab8119151b35820686')
+    let url = 'https://newsapi.org/v2/top-headlines?'.concat(Object.values({type})[0],Object.values({category})[0],'&pageSize=100&apiKey=89dccbf3b5894bab8119151b35820686')
 
     useEffect(() => {
         const getArticles = async () => {

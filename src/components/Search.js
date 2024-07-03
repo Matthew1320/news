@@ -15,10 +15,20 @@ const Search = ({setChoice}) => {
         getSources()
     },[url])
 
-    const opts = sources.map(source => ({ "value":source.name, "label":source.name }))
+    const opts = sources.map(source => ({ "value":source.id, "label":source.id }))
+    console.log(sources)
+
+    const choiceSetter = (choice) => {
+        if (choice) {
+            setChoice(choice.label)
+        }
+        else {
+            setChoice("")
+        }
+    }
 
     return (
-        <Select className='source_select' isClearable={true} isSearchable={true} onChange={(choice) => setChoice(choice.label)} options={opts} />
+        <Select className='source_select' isClearable={true} isSearchable={true} onChange={(choice) => choiceSetter(choice)} options={opts} />
     )
 }
 
