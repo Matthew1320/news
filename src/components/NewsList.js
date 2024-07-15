@@ -20,7 +20,7 @@ const NewsList = ({type,category}) => {
         <div>
             {articles.map(article => {
                 if (article.title !== 
-                    "[Removed]"){
+                    "[Removed]" && article.urlToImage !== null){
                 return (
                     <NewsItem 
                         title={article.title}

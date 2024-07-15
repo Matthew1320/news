@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.news-item {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.news-img {
+    max-width: 50%;
+    height: auto;
+    margin-right: 20px;
+}
+
+.news-item_text h3, p {
+    padding: 5px;
+}
+
