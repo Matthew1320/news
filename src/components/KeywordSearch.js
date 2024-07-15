@@ -9,10 +9,16 @@ const KeywordSearch = ({setQuery}) => {
         console.log("this is the query", potentialQuery)
     }
 
+    const clearClick = () => {
+        setQuery("")
+        setPQ("")
+    }
+
     return (
         <div>
-            <input type='search' onChange={(q) => setPQ(q.target.value)}/>
+            <input type='search' value={potentialQuery} onChange={(q) => setPQ(q.target.value)}/>
             <button onClick={searchClick}>Search</button>
+            <button onClick={clearClick}>Clear</button>
         </div>
     )
 }
