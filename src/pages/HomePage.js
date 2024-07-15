@@ -10,8 +10,8 @@ export function HomePage() {
   return (
     <div className="App">
       <h1>Welcome to the Mews</h1>   
-      <Search setChoice={setChoice}/>
-      <KeywordSearch setQuery={setQuery} />
+      <Search setChoice={setChoice} setQuery={setQuery}/>
+      <KeywordSearch setChoice={setChoice} setQuery={setQuery} />
       <div>
         { choice 
             ? <NewsList type={'sources='} category={choice} />

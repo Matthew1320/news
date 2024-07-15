@@ -3,7 +3,7 @@ import axios from 'axios'
 import Select from 'react-select'
 
 
-const Search = ({setChoice}) => {
+const Search = ({setChoice, setQuery}) => {
     const [sources, setSources] = useState([])
     let url = 'https://newsapi.org/v2/top-headlines/sources?apiKey=89dccbf3b5894bab8119151b35820686'
 
@@ -21,6 +21,7 @@ const Search = ({setChoice}) => {
     const choiceSetter = (choice) => {
         if (choice) {
             setChoice(choice.label)
+            setQuery("")
         }
         else {
             setChoice("")

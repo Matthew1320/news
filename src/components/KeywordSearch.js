@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 
-const KeywordSearch = ({setQuery}) => {
+const KeywordSearch = ({setChoice, setQuery}) => {
 
     const [potentialQuery, setPQ] = useState("")
 
     const searchClick = () => {
+        setChoice("")
         setQuery(potentialQuery)
-        console.log("this is the query", potentialQuery)
+
     }
 
     const clearClick = () => {
