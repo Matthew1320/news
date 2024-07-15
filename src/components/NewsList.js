@@ -5,6 +5,7 @@ import NewsItem from './NewsItem'
 const NewsList = ({type,category}) => {
     const [articles, setArticles] = useState([])
     let url = 'https://newsapi.org/v2/top-headlines?'.concat(Object.values({type})[0],Object.values({category})[0],'&pageSize=100&apiKey=89dccbf3b5894bab8119151b35820686')
+    console.log(url)
 
     useEffect(() => {
         const getArticles = async () => {
